@@ -2,13 +2,13 @@ document.getElementById('flipBtn').addEventListener('click', function() {
     const resultElem = document.getElementById('result');
     const coinElem = document.getElementById('coin');
   
-    coinElem.classList.add('flipping', 'flyUp');
+    coinElem.classList.add('flipping');
   
     setTimeout(function() {
       const randomNum = Math.random();
       const result = randomNum < 0.5 ? 'Heads' : 'Tails';
       resultElem.textContent = `Result: ${result}`;
-      coinElem.classList.remove('flipping', 'flyUp');
+      coinElem.classList.remove('flipping');
       updateCoinFaces(result);
       setTimeout(function() {
         coinElem.classList.add('landDown');
